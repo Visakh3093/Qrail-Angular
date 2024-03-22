@@ -1,0 +1,173 @@
+<div class="container-lg">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a routerLink="/">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page"><a routerLink="/contact-us">Contact us</a></li>
+        </ol>
+    </nav>
+</div>
+
+<div class="container-lg ">
+    <div class="grey-box mb-5">
+        <div class="row">
+            <div class="col-lg-12 order-1 order-lg-1">
+                <h1 class="f25 text-white mt-2 mt-lg-0 mb-4">Contact us</h1>
+            </div>
+            <div class="col-lg-8 order-2 order-lg-2">
+                <form [formGroup]="formData" (ngSubmit)="handleSubmit()" class="row text-white">
+
+                    @for (item of inputData; track $index) {
+                        @switch (item.type) {
+                            @case ("text") {
+
+                                <div class="mb-3 col-lg-6">
+                                    <label for={{item.key}} class="form-label">{{item.label}} </label>
+                                    <input  formControlName={{item.key}} type="text" class="form-control" [class.is-invalid]="errorObj[item.key]" id={{item.key}} aria-describedby="Ful Name "
+                                        placeholder={{item.placeholder}}>
+                                        @if (errorObj[item.key] != "") {
+                                            <div id="validationServer03Feedback" class="invalid-feedback">
+                                                {{errorObj[item.key]}}
+                                            </div>
+                                        }
+                                </div>
+
+                            }
+                            @case ("email") {
+                                <div class="mb-3 col-lg-6">
+                                    <label for={{item.key}} class="form-label">{{item.label}} </label>
+                                    <input formControlName={{item.key}} type="text" class="form-control" [class.is-invalid]="errorObj[item.key]" id={{item.key}} aria-describedby="Email Address "
+                                        placeholder={{item.placeholder}}>
+                                        @if (errorObj[item.key] != "") {
+                                            <div id="validationServer03Feedback" class="invalid-feedback">
+                                                {{errorObj[item.key]}}
+                                            </div>
+                                        }
+                                </div>
+                                
+                            }
+                            @case ("mobile") {
+
+                                <div class="mb-3 col-lg-6">
+                                    <label for={{item.key}} class="form-label">{{item.label}}</label>
+                                    <input formControlName={{item.key}} type="text" class="form-control" [class.is-invalid]="errorObj[item.key]" id={{item.key}} aria-describedby="Mobile Number"
+                                        placeholder={{item.placeholder}}>
+                                        @if (errorObj[item.key] != "") {
+                                            <div id="validationServer03Feedback" class="invalid-feedback">
+                                                {{errorObj[item.key]}}
+                                            </div>
+                                        }
+                                </div>
+
+                            }
+                            @case ("select") {
+
+                                <div class="mb-3 col-lg-6">
+                                    <label for="gender" class="form-label">{{item.label}} </label>
+                                    <select formControlName={{item.key}} id="gender" class="form-select form-control" [class.is-invalid]="errorObj[item.key]">
+                                        <option value="">Select</option>
+                                    </select>
+                                </div>
+                                
+                            }
+                            @case ("textarea") {
+                                <div class="mb-3 col-lg-12">
+                                    <label for="note" class="form-label">{{item.label}} </label>
+                                    <textarea formControlName={{item.key}}  class="form-control" [class.is-invalid]="errorObj[item.key]" id="note" aria-describedby="Enter your message"
+                                        placeholder={{item.placeholder}}></textarea>
+                                        @if (errorObj[item.key] != "") {
+                                            <div id="validationServer03Feedback" class="invalid-feedback">
+                                                {{errorObj[item.key]}}
+                                            </div>
+                                        }
+            
+                                </div>
+                                
+                            }
+                            @case ("checkbox") {
+                                <div class="mb-1 col-12">
+                                    <div class="form-check ps-0">
+                                        <input formControlName={{item.key}} type="checkbox" class="form-check-input" [class.is-invalid]="errorObj[item.key]" id="subscribe" name="subscribe">
+                                        <label class="form-check-label me-auto" for="subscribe">{{item.label}}</label>
+                                    </div>
+                                </div>
+
+                                
+                            }
+                        }
+                    }
+                    <!-- <div class="mb-3 col-lg-6">
+                        <label for="name" class="form-label">Ful Name </label>
+                        <input type="text" class="form-control" id="name" aria-describedby="Ful Name "
+                            placeholder="Ful Name ">
+                    </div> -->
+                    <!-- <div class="mb-3 col-lg-6">
+                        <label for="email" class="form-label">Email Address </label>
+                        <input type="text" class="form-control" id="email" aria-describedby="Email Address "
+                            placeholder="Email Address ">
+                    </div> -->
+                    <!-- <div class="mb-3 col-lg-6">
+                        <label for="gender" class="form-label">Subject </label>
+                        <select id="gender" class="form-select form-control">
+                            <option>Select</option>
+                        </select>
+                    </div> -->
+                    <!-- <div class="mb-3 col-lg-6">
+                        <label for="mobile" class="form-label">Mobile Number</label>
+                        <input type="text" class="form-control" id="mobile" aria-describedby="Mobile Number"
+                            placeholder="+974 xxxx xxxx">
+                    </div> -->
+                    <!-- <div class="mb-3 col-lg-12">
+                        <label for="note" class="form-label">Note </label>
+                        <textarea class="form-control" id="note" aria-describedby="Enter your message"
+                            placeholder="Enter your message"></textarea>
+
+                    </div> -->
+                    <!-- <div class="mb-1 col-12">
+                        <div class="form-check ps-0">
+                            <input type="checkbox" class="form-check-input" id="subscribe" name="subscribe">
+                            <label class="form-check-label me-auto" for="subscribe">Request a call back</label>
+                        </div>
+                    </div> -->
+
+                    <div class="mt-3">
+                        <button type="submit" class="btn btn-primary me-1 me-lg-2" >Submit </button>
+                        <button  class="btn btn-primary me-1 me-lg-2" >Cancel</button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-lg-4 order-2 order-lg-3 mb-4 mb-lg-0">
+                <div class="bg-grey p-4 mt-4 rounded mt-lg-0">
+                    <h2 class="text-white mb-4 f20">Contact information</h2>
+                    <div class="d-flex align-items-center information mb-2">
+                        <figure class="mb-0 flex-shirnk-0">
+                            <img src="assets/images/phone.svg" alt="phone" class="img-fluid" />
+                        </figure>
+                        <aside class="flex-shirnk-1">
+                            <span>Inside Qatar</span>
+                            <p class="m-0 text-yellow1">105</p>
+                        </aside>
+                    </div>
+                    <div class="d-flex align-items-center information mb-2">
+                        <figure class="mb-0 flex-shirnk-0">
+                            <img src="assets/images/mobile.svg" alt="mobile" class="img-fluid" />
+                        </figure>
+                        <aside class="flex-shirnk-1">
+                            <span>Outside Qatar</span>
+                            <p class="m-0 text-yellow1 dir-ltr number">+974 4429 3777</p>
+                        </aside>
+                    </div>
+                    <div class="d-flex align-items-center information mb-4">
+                        <figure class="mb-0 flex-shirnk-0">
+                            <img src="assets/images/hour.svg" alt="hour" class="img-fluid" />
+                        </figure>
+                        <aside class="flex-shirnk-1">
+                            <span>Hours of operation</span>
+                            <p class="m-0 text-yellow1">24/7</p>
+                        </aside>
+                    </div>
+                    <p class="fw-ligh"><i>* Local standard charges apply </i></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

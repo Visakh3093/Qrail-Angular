@@ -1,0 +1,229 @@
+<div class="container-lg">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a routerLink="/">Home</a></li>
+            <li class="breadcrumb-item"><a routerLink="/login">Log in</a></li>
+            <li class="breadcrumb-item active" aria-current="page"><a routerLink="/register">Registration</a></li>
+        </ol>
+    </nav>
+</div>
+
+<div class="container-lg ">
+    <div class="grey-box mb-5">
+        <div class="row">
+            <div class="col-lg-12 order-1 order-lg-1">
+                <h1 class="f25 text-white mt-4 mt-lg-0 mb-4">Registration</h1>
+            </div>
+            <div class="col-lg-8 order-3 order-lg-2">
+                <form [formGroup]="formData" (ngSubmit)="handleSubmit()" class="row text-white">
+                    @for (item of imputData; track $index) {
+                        @switch (item.type) {
+                            @case ("select") {
+                                <div class="mb-3 col-lg-6">
+                                    <label for={{item.key}} class="form-label">{{item.label}}</label>
+                                    <select formControlName={{item.key}} id={{item.key}} class="form-select form-control" [class.is-invalid]="errorObj[item.key]">
+                                        <option value="">Select</option>
+                                    </select>
+                                </div>
+                            }
+                            @case ("text") {
+                                <div class="mb-3 col-lg-6">
+                                    <label for={{item.key}} class="form-label">{{item.label}}</label>
+                                    <input formControlName={{item.key}} type="text" class="form-control " [class.is-invalid]="errorObj[item.key]" id={{item.key}} aria-describedby="User name"
+                                        placeholder={{item.placeholder}}>
+                                        @if (errorObj[item.key] != "") {
+                                            <div id="validationServer03Feedback" class="invalid-feedback">
+                                                {{errorObj[item.key]}}
+                                            </div>
+                                        }
+                                </div>
+                            }
+                            @case ("email") {
+                                <div class="mb-3 col-lg-6">
+                                    <label for={{item.key}} class="form-label">{{item.label}}</label>
+                                    <input formControlName={{item.key}} type="email" class="form-control " [class.is-invalid]="errorObj[item.key]" id={{item.key}}
+                                        aria-describedby="User name" placeholder={{item.placeholder}}>
+                                        @if (errorObj[item.key] != "") {
+                                            <div id="validationServer03Feedback" class="invalid-feedback">
+                                                {{errorObj[item.key]}}
+                                            </div>
+                                        }
+                                   
+                                </div>
+                            }
+                            @case ("password") {
+                                <div class="mb-3 col-lg-6">
+                                    <label for={{item.key}} class="form-label">{{item.label}}</label>
+                                    <div class="position-relative">
+                                        <input formControlName={{item.key}} type="text" class="form-control" [class.is-invalid]="errorObj[item.key]" id={{item.key}} aria-describedby="Password"
+                                            placeholder={{item.label}}>
+                                        <button type="button" class="btn btn-secondary btn-sm show-btn">Show</button>
+                                    </div>
+                                    @if (errorObj[item.key] != "") {
+                                        <div id="validationServer03Feedback" class="invalid-feedback">
+                                            {{errorObj[item.key]}}
+                                        </div>
+                                    }
+                                </div>
+                            }
+                            @case ("mobile") {
+                                <div class="mb-3 col-lg-6">
+                                    <label for={{item.key}} class="form-label">{{item.label}}</label>
+                                    <input formControlName={{item.key}} type="tel" class="form-control " [class.is-invalid]="errorObj[item.key]" id={{item.key}} aria-describedby="User name"
+                                        placeholder={{item.label}}>
+                                        @if (errorObj[item.key] != "") {
+                                            <div id="validationServer03Feedback" class="invalid-feedback">
+                                                {{errorObj[item.key]}}
+                                            </div>
+                                        }
+                                </div>
+                            }
+                            @case ("date") {
+                                <div class="mb-3 col-lg-6">
+                                    <label for={{item.key}} class="form-label">{{item.label}}</label>
+                                    <input  formControlName={{item.key}} type="date" class="form-control " [class.is-invalid]="errorObj[item.key]" id={{item.key}} aria-describedby="User name"
+                                        placeholder="Select">
+                                        @if (errorObj[item.key] != "") {
+                                            <div id="validationServer03Feedback" class="invalid-feedback">
+                                                {{errorObj[item.key]}}
+                                            </div>
+                                        }
+                                </div>
+                            }
+                            @case ("checkbox") {
+                                <div class="mb-1 col-12">
+                                    <div class="form-check ps-0">
+                                        <input  formControlName={{item.key}} type="checkbox" class="form-check-input" [class.is-invalid]="errorObj[item.key]" id={{item.key}} name={{item.key}}>
+                                        <label class="form-check-label me-auto" for={{item.key}}>{{item.label}}</label>
+                                    </div>
+                                    <!-- @if (errorObj[item.key] != "") {
+                                        <div id="validationServer03Feedback" class="invalid-feedback">
+                                            {{errorObj[item.key]}}
+                                        </div>
+                                    } -->
+                                </div>
+                            }
+                        }
+                    }
+                    <!-- <div class="mb-3 col-lg-6">
+                        <label for="id" class="form-label">ID Type</label>
+                        <select id="id" class="form-select form-control">
+                            <option>Select</option>
+                        </select>
+                    </div> -->
+                    <!-- <div class="mb-3 col-lg-6">
+                        <label for="id" class="form-label">Birth Date</label>
+                        <input type="date" class="form-control" id="id" aria-describedby="User name"
+                            placeholder="Select">
+                    </div> -->
+                    <!-- <div class="mb-3 col-lg-6">
+                        <label for="idNumber" class="form-label">ID Number</label>
+                        <input type="text" class="form-control" id="idNumber" aria-describedby="User name"
+                            placeholder="ID Number">
+                    </div> -->
+                    <!-- <div class="mb-3 col-lg-6">
+                        <label for="gender" class="form-label">Gender </label>
+                        <select id="gender" class="form-select form-control">
+                            <option>Select</option>
+                        </select>
+                    </div> -->
+                    <!-- <div class="mb-3 col-lg-6">
+                        <label for="title" class="form-label">Title</label>
+                        <select id="title" class="form-select form-control">
+                            <option>Select</option>
+                        </select>
+                    </div> -->
+                    <!-- <div class="mb-3 col-lg-6">
+                        <label for="nationality " class="form-label">Nationality</label>
+                        <select id="nationality " class="form-select form-control">
+                            <option>Select</option>
+                        </select>
+                    </div> -->
+                    <!-- <div class="mb-3 col-lg-6">
+                        <label for="name " class="form-label">First Name</label>
+                        <input type="text" class="form-control" id="name" aria-describedby="User name"
+                            placeholder="First name">
+                    </div> -->
+                    <!-- <div class="mb-3 col-lg-6">
+                        <label for="email " class="form-label">Email Address</label>
+                        <input type="email" class="form-control" id="email" aria-describedby="User name"
+                            placeholder="example@gmail.com">
+                    </div> -->
+                    <!-- <div class="mb-3 col-lg-6">
+                        <label for="lastName " class="form-label">Last Name</label>
+                        <input type="text" class="form-control" id="lastName" aria-describedby="User name"
+                            placeholder="Last name">
+                    </div> -->
+                    <!-- <div class="mb-3 col-lg-6">
+                        <label for="recovery" class="form-label">Reconfirm Email</label>
+                        <input type="email" class="form-control is-invalid" id="email"
+                            aria-describedby="User name" placeholder="example@gmail.com">
+                        <div id="validationServer03Feedback" class="invalid-feedback">
+                            Please provide a valid email.
+                        </div>
+                    </div> -->
+                    <!-- <div class="mb-3 col-lg-6">
+                        <label for="profession" class="form-label">Profession</label>
+                        <select id="profession" class="form-select form-control">
+                            <option>Select</option>
+                        </select>
+                    </div> -->
+                    <!-- <div class="mb-3 col-lg-6">
+                        <label for="password" class="form-label">Password</label>
+                        <div class="position-relative">
+                            <input type="text" class="form-control" id="password" aria-describedby="password"
+                                placeholder="Password">
+                            <button type="button" class="btn btn-secondary btn-sm show-btn">Show</button>
+                        </div>
+                    </div> -->
+                    <!-- <div class="mb-3 col-lg-6">
+                        <label for="telephone" class="form-label">Mobile Number</label>
+                        <input type="tel" class="form-control" id="telephone" aria-describedby="User name"
+                            placeholder="+971 xxxx xxxx">
+                    </div> -->
+                    <!-- <div class="mb-3 col-lg-6">
+                        <label for="password" class="form-label">Confirm Password</label>
+                        <div class="position-relative">
+                            <input type="text" class="form-control" id="password" aria-describedby="password"
+                                placeholder="Password">
+                            <button type="button" class="btn btn-secondary btn-sm show-btn">Show</button>
+                        </div>
+                    </div> -->
+                    <!-- <div class="mb-1 col-12">
+                        <div class="form-check ps-0">
+                            <input type="checkbox" class="form-check-input" id="subscribe" name="subscribe">
+                            <label class="form-check-label me-auto" for="subscribe">Subscribe for offers &
+                                promotions</label>
+                        </div>
+                    </div> -->
+                    <!-- <div class="mb-3 col-12">
+                        <div class="form-check ps-0">
+                            <input type="checkbox" class="form-check-input" id="privacy" name="privacy">
+                            <label class="form-check-label me-auto" for="privacy">I have read and agree to the
+                                <a href="" class="text-yellow1 link-text">Terms of service & Privacy
+                                    policy</a></label>
+                        </div>
+                    </div> -->
+                    <div class="mt-3">
+                        <button type="submit" class="btn btn-primary me-1 me-lg-2" href="#" data-bs-toggle="modal" data-bs-target="#confirmModal">Register </button>
+                        <button  class="btn btn-primary me-1 me-lg-2" >Cancel</button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-lg-4 order-2 order-lg-3 mb-4 mb-lg-0">
+                <div class="bg-grey p-4 rounded ms-lg-5">
+                    <h2 class="text-white mb-4 f20">Why Register?</h2>
+                    <ul class="list-triangle mb-4">
+                        <li>To protect your balance if your card is lost or stolen</li>
+                        <li>To Manage Card(s)</li>
+                        <li>To view journey history</li>
+                        <li>To view transaction history, including any current products</li>
+                        <li>To receive offers & promotions.</li>
+                    </ul>
+                    <p class="fw-ligh"><i>For more information <a href="" class="text-yellow1 link-text">Click
+                                here</a></i></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

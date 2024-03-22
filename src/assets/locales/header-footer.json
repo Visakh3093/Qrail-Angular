@@ -1,0 +1,749 @@
+{
+    "status": true,
+    "headers": {
+        "language": "en",
+        "api-platform": "web"
+    },
+    "body": {
+        "header": [
+            {
+                "base_url": "https://uatadmin.qr.com.qa",
+                "url": "/",
+                "title": "Travel Information",
+                "external": false,
+                "icon": {
+                    "alt": "default image",
+                    "url": "https://uatweb.qr.com.qa/cms/modules/custom/qatar_rail_helper_module/assets/images/qrail.png"
+                },
+                "icon_mini": {
+                    "alt": "default image",
+                    "url": "https://uatweb.qr.com.qa/cms/modules/custom/qatar_rail_helper_module/assets/images/qrail.png"
+                },
+                "below": [
+                    {
+                        "base_url": "https://uatadmin.qr.com.qa",
+                        "url": "",
+                        "title": "Karwa",
+                        "external": false,
+                        "icon": {
+                            "alt": "default image",
+                            "url": "https://uatweb.qr.com.qa/cms/modules/custom/qatar_rail_helper_module/assets/images/qrail.png"
+                        },
+                        "icon_mini": {
+                            "alt": "default image",
+                            "url": "https://uatweb.qr.com.qa/cms/modules/custom/qatar_rail_helper_module/assets/images/qrail.png"
+                        }
+                    },
+                    {
+                        "base_url": "https://uatadmin.qr.com.qa",
+                        "url": "/retail-and-facilities",
+                        "title": "Retail & Facilities",
+                        "external": false,
+                        "icon": {
+                            "alt": "default image",
+                            "url": "https://uatweb.qr.com.qa/cms/modules/custom/qatar_rail_helper_module/assets/images/qrail.png"
+                        },
+                        "icon_mini": {
+                            "alt": "default image",
+                            "url": "https://uatweb.qr.com.qa/cms/modules/custom/qatar_rail_helper_module/assets/images/qrail.png"
+                        }
+                    },
+                    {
+                        "base_url": "https://uatadmin.qr.com.qa",
+                        "url": "/metro-express",
+                        "title": "Metroexpress",
+                        "external": false,
+                        "icon": {
+                            "alt": "default image",
+                            "url": "https://uatweb.qr.com.qa/cms/modules/custom/qatar_rail_helper_module/assets/images/qrail.png"
+                        },
+                        "icon_mini": {
+                            "alt": "default image",
+                            "url": "https://uatweb.qr.com.qa/cms/modules/custom/qatar_rail_helper_module/assets/images/qrail.png"
+                        }
+                    }
+                ]
+            },
+            {
+                "base_url": "https://uatadmin.qr.com.qa",
+                "url": "/",
+                "title": "Travel Cards",
+                "external": false,
+                "icon": {
+                    "alt": "default image",
+                    "url": "https://uatweb.qr.com.qa/cms/modules/custom/qatar_rail_helper_module/assets/images/qrail.png"
+                },
+                "icon_mini": {
+                    "alt": "default image",
+                    "url": "https://uatweb.qr.com.qa/cms/modules/custom/qatar_rail_helper_module/assets/images/qrail.png"
+                },
+                "below": [
+                    {
+                        "base_url": "https://uatadmin.qr.com.qa",
+                        "url": "https://cpuat.qr.com.qa/qrarcgis/journeyplanner/",
+                        "title": "Plan My Journey",
+                        "external": true,
+                        "icon": {
+                            "alt": "default image",
+                            "url": "https://uatweb.qr.com.qa/cms/modules/custom/qatar_rail_helper_module/assets/images/qrail.png"
+                        },
+                        "icon_mini": {
+                            "alt": "default image",
+                            "url": "https://uatweb.qr.com.qa/cms/modules/custom/qatar_rail_helper_module/assets/images/qrail.png"
+                        }
+                    },
+                    {
+                        "base_url": "https://uatadmin.qr.com.qa",
+                        "url": "/register",
+                        "title": "Register",
+                        "external": false,
+                        "icon": {
+                            "alt": "default image",
+                            "url": "https://uatweb.qr.com.qa/cms/modules/custom/qatar_rail_helper_module/assets/images/qrail.png"
+                        },
+                        "icon_mini": {
+                            "alt": "default image",
+                            "url": "https://uatweb.qr.com.qa/cms/modules/custom/qatar_rail_helper_module/assets/images/qrail.png"
+                        }
+                    },
+                    {
+                        "base_url": "https://uatadmin.qr.com.qa",
+                        "url": "/metrolink",
+                        "title": "Metrolink",
+                        "external": false,
+                        "icon": {
+                            "alt": "default image",
+                            "url": "https://uatweb.qr.com.qa/cms/modules/custom/qatar_rail_helper_module/assets/images/qrail.png"
+                        },
+                        "icon_mini": {
+                            "alt": "default image",
+                            "url": "https://uatweb.qr.com.qa/cms/modules/custom/qatar_rail_helper_module/assets/images/qrail.png"
+                        }
+                    },
+                    {
+                        "base_url": "https://uatadmin.qr.com.qa",
+                        "url": "",
+                        "title": "Fare and travel cards",
+                        "external": false,
+                        "icon": {
+                            "alt": "default image",
+                            "url": "https://uatweb.qr.com.qa/cms/modules/custom/qatar_rail_helper_module/assets/images/qrail.png"
+                        },
+                        "icon_mini": {
+                            "alt": "default image",
+                            "url": "https://uatweb.qr.com.qa/cms/modules/custom/qatar_rail_helper_module/assets/images/qrail.png"
+                        }
+                    },
+                    {
+                        "base_url": "https://uatadmin.qr.com.qa",
+                        "url": "/top-up",
+                        "title": "Top up",
+                        "external": false,
+                        "icon": {
+                            "alt": "default image",
+                            "url": "https://uatweb.qr.com.qa/cms/modules/custom/qatar_rail_helper_module/assets/images/qrail.png"
+                        },
+                        "icon_mini": {
+                            "alt": "default image",
+                            "url": "https://uatweb.qr.com.qa/cms/modules/custom/qatar_rail_helper_module/assets/images/qrail.png"
+                        }
+                    },
+                    {
+                        "base_url": "https://uatadmin.qr.com.qa",
+                        "url": "/licensed-retailers",
+                        "title": "Licensed Retailers",
+                        "external": false,
+                        "icon": {
+                            "alt": "default image",
+                            "url": "https://uatweb.qr.com.qa/cms/modules/custom/qatar_rail_helper_module/assets/images/qrail.png"
+                        },
+                        "icon_mini": {
+                            "alt": "default image",
+                            "url": "https://uatweb.qr.com.qa/cms/modules/custom/qatar_rail_helper_module/assets/images/qrail.png"
+                        }
+                    }
+                ]
+            },
+            {
+                "base_url": "https://uatadmin.qr.com.qa",
+                "url": "/",
+                "title": "Help & Contacts",
+                "external": false,
+                "icon": {
+                    "alt": "default image",
+                    "url": "https://uatweb.qr.com.qa/cms/modules/custom/qatar_rail_helper_module/assets/images/qrail.png"
+                },
+                "icon_mini": {
+                    "alt": "default image",
+                    "url": "https://uatweb.qr.com.qa/cms/modules/custom/qatar_rail_helper_module/assets/images/qrail.png"
+                },
+                "below": [
+                    {
+                        "base_url": "https://uatadmin.qr.com.qa",
+                        "url": "/faqs",
+                        "title": "FAQs",
+                        "external": false,
+                        "icon": {
+                            "alt": "default image",
+                            "url": "https://uatweb.qr.com.qa/cms/modules/custom/qatar_rail_helper_module/assets/images/qrail.png"
+                        },
+                        "icon_mini": {
+                            "alt": "default image",
+                            "url": "https://uatweb.qr.com.qa/cms/modules/custom/qatar_rail_helper_module/assets/images/qrail.png"
+                        }
+                    },
+                    {
+                        "base_url": "https://uatadmin.qr.com.qa",
+                        "url": "/contact-us",
+                        "title": "Contact Us",
+                        "external": false,
+                        "icon": {
+                            "alt": "default image",
+                            "url": "https://uatweb.qr.com.qa/cms/modules/custom/qatar_rail_helper_module/assets/images/qrail.png"
+                        },
+                        "icon_mini": {
+                            "alt": "default image",
+                            "url": "https://uatweb.qr.com.qa/cms/modules/custom/qatar_rail_helper_module/assets/images/qrail.png"
+                        }
+                    },
+                    {
+                        "base_url": "https://uatadmin.qr.com.qa",
+                        "url": "",
+                        "title": "Sitemap",
+                        "external": false,
+                        "icon": {
+                            "alt": "default image",
+                            "url": "https://uatweb.qr.com.qa/cms/modules/custom/qatar_rail_helper_module/assets/images/qrail.png"
+                        },
+                        "icon_mini": {
+                            "alt": "default image",
+                            "url": "https://uatweb.qr.com.qa/cms/modules/custom/qatar_rail_helper_module/assets/images/qrail.png"
+                        }
+                    }
+                ]
+            },
+            {
+                "base_url": "https://uatadmin.qr.com.qa",
+                "url": "https://corp.qr.com.qa/English/Pages/default.aspx",
+                "title": "Qatar Rail",
+                "external": true,
+                "icon": {
+                    "alt": "default image",
+                    "url": "https://uatweb.qr.com.qa/cms/modules/custom/qatar_rail_helper_module/assets/images/qrail.png"
+                },
+                "icon_mini": {
+                    "alt": "default image",
+                    "url": "https://uatweb.qr.com.qa/cms/modules/custom/qatar_rail_helper_module/assets/images/qrail.png"
+                }
+            },
+            {
+                "base_url": "https://uatadmin.qr.com.qa",
+                "url": "/careers",
+                "title": "Careers",
+                "external": false,
+                "icon": {
+                    "alt": "default image",
+                    "url": "https://uatweb.qr.com.qa/cms/modules/custom/qatar_rail_helper_module/assets/images/qrail.png"
+                },
+                "icon_mini": {
+                    "alt": "default image",
+                    "url": "https://uatweb.qr.com.qa/cms/modules/custom/qatar_rail_helper_module/assets/images/qrail.png"
+                }
+            }
+        ],
+        "footer": [
+            {   
+                "base_url": "https://uatadmin.qr.com.qa",
+                "url": "/",
+                "title": "Metro & Tram",
+                "external": false,
+                "icon": {
+                    "alt": "default image",
+                    "url": "https://uatweb.qr.com.qa/cms/modules/custom/qatar_rail_helper_module/assets/images/qrail.png"
+                },
+                "icon_mini": {
+                    "alt": "default image",
+                    "url": "https://uatweb.qr.com.qa/cms/modules/custom/qatar_rail_helper_module/assets/images/qrail.png"
+                },
+                "below": [
+                    {
+                        "base_url": "https://uatadmin.qr.com.qa",
+                        "url": "/about-metro-tram",
+                        "title": "About Metro & Tram",
+                        "external": false,
+                        "icon": {
+                            "alt": "default image",
+                            "url": "https://uatweb.qr.com.qa/cms/modules/custom/qatar_rail_helper_module/assets/images/qrail.png"
+                        },
+                        "icon_mini": {
+                            "alt": "default image",
+                            "url": "https://uatweb.qr.com.qa/cms/modules/custom/qatar_rail_helper_module/assets/images/qrail.png"
+                        }
+                    },
+                    {
+                        "base_url": "https://uatadmin.qr.com.qa",
+                        "url": "",
+                        "title": "Facts & Figures",
+                        "external": false,
+                        "icon": {
+                            "alt": "default image",
+                            "url": "https://uatweb.qr.com.qa/cms/modules/custom/qatar_rail_helper_module/assets/images/qrail.png"
+                        },
+                        "icon_mini": {
+                            "alt": "default image",
+                            "url": "https://uatweb.qr.com.qa/cms/modules/custom/qatar_rail_helper_module/assets/images/qrail.png"
+                        }
+                    },
+                    {
+                        "base_url": "https://uatadmin.qr.com.qa",
+                        "url": "",
+                        "title": "Careers",
+                        "external": false,
+                        "icon": {
+                            "alt": "default image",
+                            "url": "https://uatweb.qr.com.qa/cms/modules/custom/qatar_rail_helper_module/assets/images/qrail.png"
+                        },
+                        "icon_mini": {
+                            "alt": "default image",
+                            "url": "https://uatweb.qr.com.qa/cms/modules/custom/qatar_rail_helper_module/assets/images/qrail.png"
+                        }
+                    },
+                    {
+                        "base_url": "https://uatadmin.qr.com.qa",
+                        "url": "https://corp.qr.com.qa/English/Pages/default.aspx",
+                        "title": "Qatar Rail",
+                        "external": true,
+                        "icon": {
+                            "alt": "default image",
+                            "url": "https://uatweb.qr.com.qa/cms/modules/custom/qatar_rail_helper_module/assets/images/qrail.png"
+                        },
+                        "icon_mini": {
+                            "alt": "default image",
+                            "url": "https://uatweb.qr.com.qa/cms/modules/custom/qatar_rail_helper_module/assets/images/qrail.png"
+                        }
+                    }
+                ]
+            },
+            {
+                "base_url": "https://uatadmin.qr.com.qa",
+                "url": "/",
+                "title": "What's On",
+                "external": false,
+                "icon": {
+                    "alt": "default image",
+                    "url": "https://uatweb.qr.com.qa/cms/modules/custom/qatar_rail_helper_module/assets/images/qrail.png"
+                },
+                "icon_mini": {
+                    "alt": "default image",
+                    "url": "https://uatweb.qr.com.qa/cms/modules/custom/qatar_rail_helper_module/assets/images/qrail.png"
+                },
+                "below": [
+                    {
+                        "base_url": "https://uatadmin.qr.com.qa",
+                        "url": "/news",
+                        "title": "News",
+                        "external": false,
+                        "icon": {
+                            "alt": "default image",
+                            "url": "https://uatweb.qr.com.qa/cms/modules/custom/qatar_rail_helper_module/assets/images/qrail.png"
+                        },
+                        "icon_mini": {
+                            "alt": "default image",
+                            "url": "https://uatweb.qr.com.qa/cms/modules/custom/qatar_rail_helper_module/assets/images/qrail.png"
+                        }
+                    },
+                    {
+                        "base_url": "https://uatadmin.qr.com.qa",
+                        "url": "/promotions",
+                        "title": "Promotions",
+                        "external": false,
+                        "icon": {
+                            "alt": "default image",
+                            "url": "https://uatweb.qr.com.qa/cms/modules/custom/qatar_rail_helper_module/assets/images/qrail.png"
+                        },
+                        "icon_mini": {
+                            "alt": "default image",
+                            "url": "https://uatweb.qr.com.qa/cms/modules/custom/qatar_rail_helper_module/assets/images/qrail.png"
+                        }
+                    }
+                ]
+            },
+            {
+                "base_url": "https://uatadmin.qr.com.qa",
+                "url": "/",
+                "title": "Explore",
+                "external": false,
+                "icon": {
+                    "alt": "default image",
+                    "url": "https://uatweb.qr.com.qa/cms/modules/custom/qatar_rail_helper_module/assets/images/qrail.png"
+                },
+                "icon_mini": {
+                    "alt": "default image",
+                    "url": "https://uatweb.qr.com.qa/cms/modules/custom/qatar_rail_helper_module/assets/images/qrail.png"
+                },
+                "below": [
+                    {
+                        "base_url": "https://uatadmin.qr.com.qa",
+                        "url": "",
+                        "title": "Fares and Travel Cards",
+                        "external": false,
+                        "icon": {
+                            "alt": "default image",
+                            "url": "https://uatweb.qr.com.qa/cms/modules/custom/qatar_rail_helper_module/assets/images/qrail.png"
+                        },
+                        "icon_mini": {
+                            "alt": "default image",
+                            "url": "https://uatweb.qr.com.qa/cms/modules/custom/qatar_rail_helper_module/assets/images/qrail.png"
+                        }
+                    },
+                    {
+                        "base_url": "https://uatadmin.qr.com.qa",
+                        "url": "/register",
+                        "title": "Register",
+                        "external": false,
+                        "icon": {
+                            "alt": "default image",
+                            "url": "https://uatweb.qr.com.qa/cms/modules/custom/qatar_rail_helper_module/assets/images/qrail.png"
+                        },
+                        "icon_mini": {
+                            "alt": "default image",
+                            "url": "https://uatweb.qr.com.qa/cms/modules/custom/qatar_rail_helper_module/assets/images/qrail.png"
+                        }
+                    },
+                    {
+                        "base_url": "https://uatadmin.qr.com.qa",
+                        "url": "/top-up",
+                        "title": "Top Up",
+                        "external": false,
+                        "icon": {
+                            "alt": "default image",
+                            "url": "https://uatweb.qr.com.qa/cms/modules/custom/qatar_rail_helper_module/assets/images/qrail.png"
+                        },
+                        "icon_mini": {
+                            "alt": "default image",
+                            "url": "https://uatweb.qr.com.qa/cms/modules/custom/qatar_rail_helper_module/assets/images/qrail.png"
+                        }
+                    }
+                ]
+            },
+            {
+                "base_url": "https://uatadmin.qr.com.qa",
+                "url": "/",
+                "title": "Network & Services",
+                "external": false,
+                "icon": {
+                    "alt": "default image",
+                    "url": "https://uatweb.qr.com.qa/cms/modules/custom/qatar_rail_helper_module/assets/images/qrail.png"
+                },
+                "icon_mini": {
+                    "alt": "default image",
+                    "url": "https://uatweb.qr.com.qa/cms/modules/custom/qatar_rail_helper_module/assets/images/qrail.png"
+                },
+                "below": [
+                    {
+                        "base_url": "https://uatadmin.qr.com.qa",
+                        "url": "https://www.qr.com.qa/qrgis/PlanMyJourney/",
+                        "title": "Plan My Journey",
+                        "external": true,
+                        "icon": {
+                            "alt": "default image",
+                            "url": "https://uatweb.qr.com.qa/cms/modules/custom/qatar_rail_helper_module/assets/images/qrail.png"
+                        },
+                        "icon_mini": {
+                            "alt": "default image",
+                            "url": "https://uatweb.qr.com.qa/cms/modules/custom/qatar_rail_helper_module/assets/images/qrail.png"
+                        }
+                    },
+                    {
+                        "base_url": "https://uatadmin.qr.com.qa",
+                        "url": "/metrolink",
+                        "title": "Metrolink",
+                        "external": false,
+                        "icon": {
+                            "alt": "default image",
+                            "url": "https://uatweb.qr.com.qa/cms/modules/custom/qatar_rail_helper_module/assets/images/qrail.png"
+                        },
+                        "icon_mini": {
+                            "alt": "default image",
+                            "url": "https://uatweb.qr.com.qa/cms/modules/custom/qatar_rail_helper_module/assets/images/qrail.png"
+                        }
+                    },
+                    {
+                        "base_url": "https://uatadmin.qr.com.qa",
+                        "url": "/metro-express",
+                        "title": "Metroexpress",
+                        "external": false,
+                        "icon": {
+                            "alt": "default image",
+                            "url": "https://uatweb.qr.com.qa/cms/modules/custom/qatar_rail_helper_module/assets/images/qrail.png"
+                        },
+                        "icon_mini": {
+                            "alt": "default image",
+                            "url": "https://uatweb.qr.com.qa/cms/modules/custom/qatar_rail_helper_module/assets/images/qrail.png"
+                        }
+                    },
+                    {
+                        "base_url": "https://uatadmin.qr.com.qa",
+                        "url": "",
+                        "title": "Karwa",
+                        "external": false,
+                        "icon": {
+                            "alt": "default image",
+                            "url": "https://uatweb.qr.com.qa/cms/modules/custom/qatar_rail_helper_module/assets/images/qrail.png"
+                        },
+                        "icon_mini": {
+                            "alt": "default image",
+                            "url": "https://uatweb.qr.com.qa/cms/modules/custom/qatar_rail_helper_module/assets/images/qrail.png"
+                        }
+                    },
+                    {
+                        "base_url": "https://uatadmin.qr.com.qa",
+                        "url": "/retail-and-facilities",
+                        "title": "Retail & Facilities",
+                        "external": false,
+                        "icon": {
+                            "alt": "default image",
+                            "url": "https://uatweb.qr.com.qa/cms/modules/custom/qatar_rail_helper_module/assets/images/qrail.png"
+                        },
+                        "icon_mini": {
+                            "alt": "default image",
+                            "url": "https://uatweb.qr.com.qa/cms/modules/custom/qatar_rail_helper_module/assets/images/qrail.png"
+                        }
+                    },
+                    {
+                        "base_url": "https://uatadmin.qr.com.qa",
+                        "url": "/licensed-retailers",
+                        "title": "Licensed Retailers",
+                        "external": false,
+                        "icon": {
+                            "alt": "default image",
+                            "url": "https://uatweb.qr.com.qa/cms/modules/custom/qatar_rail_helper_module/assets/images/qrail.png"
+                        },
+                        "icon_mini": {
+                            "alt": "default image",
+                            "url": "https://uatweb.qr.com.qa/cms/modules/custom/qatar_rail_helper_module/assets/images/qrail.png"
+                        }
+                    }
+                ]
+            },
+            {
+                "base_url": "https://uatadmin.qr.com.qa",
+                "url": "/",
+                "title": "Partners",
+                "external": false,
+                "icon": {
+                    "alt": "default image",
+                    "url": "https://uatweb.qr.com.qa/cms/modules/custom/qatar_rail_helper_module/assets/images/qrail.png"
+                },
+                "icon_mini": {
+                    "alt": "default image",
+                    "url": "https://uatweb.qr.com.qa/cms/modules/custom/qatar_rail_helper_module/assets/images/qrail.png"
+                },
+                "below": [
+                    {
+                        "base_url": "https://uatadmin.qr.com.qa",
+                        "url": "",
+                        "title": "Mowasalat",
+                        "external": false,
+                        "icon": {
+                            "alt": "default image",
+                            "url": "https://uatweb.qr.com.qa/cms/modules/custom/qatar_rail_helper_module/assets/images/qrail.png"
+                        },
+                        "icon_mini": {
+                            "alt": "default image",
+                            "url": "https://uatweb.qr.com.qa/cms/modules/custom/qatar_rail_helper_module/assets/images/qrail.png"
+                        }
+                    },
+                    {
+                        "base_url": "https://uatadmin.qr.com.qa",
+                        "url": "",
+                        "title": "MoTC",
+                        "external": false,
+                        "icon": {
+                            "alt": "default image",
+                            "url": "https://uatweb.qr.com.qa/cms/modules/custom/qatar_rail_helper_module/assets/images/qrail.png"
+                        },
+                        "icon_mini": {
+                            "alt": "default image",
+                            "url": "https://uatweb.qr.com.qa/cms/modules/custom/qatar_rail_helper_module/assets/images/qrail.png"
+                        }
+                    }
+                ]
+            },
+            {
+                "base_url": "https://uatadmin.qr.com.qa",
+                "url": "/",
+                "title": "Help & Contacts",
+                "external": false,
+                "icon": {
+                    "alt": "default image",
+                    "url": "https://uatweb.qr.com.qa/cms/modules/custom/qatar_rail_helper_module/assets/images/qrail.png"
+                },
+                "icon_mini": {
+                    "alt": "default image",
+                    "url": "https://uatweb.qr.com.qa/cms/modules/custom/qatar_rail_helper_module/assets/images/qrail.png"
+                },
+                "below": [
+                    {
+                        "base_url": "https://uatadmin.qr.com.qa",
+                        "url": "/faqs",
+                        "title": "FAQs",
+                        "external": false,
+                        "icon": {
+                            "alt": "default image",
+                            "url": "https://uatweb.qr.com.qa/cms/modules/custom/qatar_rail_helper_module/assets/images/qrail.png"
+                        },
+                        "icon_mini": {
+                            "alt": "default image",
+                            "url": "https://uatweb.qr.com.qa/cms/modules/custom/qatar_rail_helper_module/assets/images/qrail.png"
+                        }
+                    },
+                    {
+                        "base_url": "https://uatadmin.qr.com.qa",
+                        "url": "/contact-us",
+                        "title": "Contact Us",
+                        "external": false,
+                        "icon": {
+                            "alt": "default image",
+                            "url": "https://uatweb.qr.com.qa/cms/modules/custom/qatar_rail_helper_module/assets/images/qrail.png"
+                        },
+                        "icon_mini": {
+                            "alt": "default image",
+                            "url": "https://uatweb.qr.com.qa/cms/modules/custom/qatar_rail_helper_module/assets/images/qrail.png"
+                        }
+                    },
+                    {
+                        "base_url": "https://uatadmin.qr.com.qa",
+                        "url": "",
+                        "title": "Sitemap",
+                        "external": false,
+                        "icon": {
+                            "alt": "default image",
+                            "url": "https://uatweb.qr.com.qa/cms/modules/custom/qatar_rail_helper_module/assets/images/qrail.png"
+                        },
+                        "icon_mini": {
+                            "alt": "default image",
+                            "url": "https://uatweb.qr.com.qa/cms/modules/custom/qatar_rail_helper_module/assets/images/qrail.png"
+                        }
+                    }
+                ]
+            },
+            {
+                "base_url": "https://uatadmin.qr.com.qa",
+                "url": "/",
+                "title": "Our Policies",
+                "external": false,
+                "icon": {
+                    "alt": "default image",
+                    "url": "https://uatweb.qr.com.qa/cms/modules/custom/qatar_rail_helper_module/assets/images/qrail.png"
+                },
+                "icon_mini": {
+                    "alt": "default image",
+                    "url": "https://uatweb.qr.com.qa/cms/modules/custom/qatar_rail_helper_module/assets/images/qrail.png"
+                },
+                "below": [
+                    {
+                        "base_url": "https://uatadmin.qr.com.qa",
+                        "url": "/terms-and-condition",
+                        "title": "Terms & Conditions | Privacy Policy",
+                        "external": false,
+                        "icon": {
+                            "alt": "default image",
+                            "url": "https://uatweb.qr.com.qa/cms/modules/custom/qatar_rail_helper_module/assets/images/qrail.png"
+                        },
+                        "icon_mini": {
+                            "alt": "default image",
+                            "url": "https://uatweb.qr.com.qa/cms/modules/custom/qatar_rail_helper_module/assets/images/qrail.png"
+                        }
+                    },
+                    {
+                        "base_url": "https://uatadmin.qr.com.qa",
+                        "url": "",
+                        "title": "Customer Charter",
+                        "external": false,
+                        "icon": {
+                            "alt": "default image",
+                            "url": "https://uatweb.qr.com.qa/cms/modules/custom/qatar_rail_helper_module/assets/images/qrail.png"
+                        },
+                        "icon_mini": {
+                            "alt": "default image",
+                            "url": "https://uatweb.qr.com.qa/cms/modules/custom/qatar_rail_helper_module/assets/images/qrail.png"
+                        }
+                    },
+                    {
+                        "base_url": "https://uatadmin.qr.com.qa",
+                        "url": "",
+                        "title": "Conditions of Carriage",
+                        "external": false,
+                        "icon": {
+                            "alt": "default image",
+                            "url": "https://uatweb.qr.com.qa/cms/modules/custom/qatar_rail_helper_module/assets/images/qrail.png"
+                        },
+                        "icon_mini": {
+                            "alt": "default image",
+                            "url": "https://uatweb.qr.com.qa/cms/modules/custom/qatar_rail_helper_module/assets/images/qrail.png"
+                        }
+                    }
+                ]
+            }
+        ],
+        "social": [
+            {
+                "base_url": "https://uatadmin.qr.com.qa",
+                "url": "https://www.facebook.com/qrc.official/",
+                "title": "Facebook 1",
+                "external": true,
+                "icon": {
+                    "alt": "Facebook",
+                    "url": "https://uatweb.qr.com.qa/cms/sites/default/files/2022-11/fb_icon.png"
+                },
+                "icon_mini": {
+                    "alt": "default image",
+                    "url": "https://uatweb.qr.com.qa/cms/modules/custom/qatar_rail_helper_module/assets/images/qrail.png"
+                }
+            },
+            {
+                "base_url": "https://uatadmin.qr.com.qa",
+                "url": "https://www.instagram.com/",
+                "title": "Instagram",
+                "external": true,
+                "icon": {
+                    "alt": "Instagram",
+                    "url": "https://uatweb.qr.com.qa/cms/sites/default/files/2022-11/insta_icon.png"
+                },
+                "icon_mini": {
+                    "alt": "default image",
+                    "url": "https://uatweb.qr.com.qa/cms/modules/custom/qatar_rail_helper_module/assets/images/qrail.png"
+                }
+            },
+            {
+                "base_url": "https://uatadmin.qr.com.qa",
+                "url": "https://twitter.com/",
+                "title": "Twitter",
+                "external": true,
+                "icon": {
+                    "alt": "Twitter",
+                    "url": "https://uatweb.qr.com.qa/cms/sites/default/files/2022-11/twitter_icon.png"
+                },
+                "icon_mini": {
+                    "alt": "default image",
+                    "url": "https://uatweb.qr.com.qa/cms/modules/custom/qatar_rail_helper_module/assets/images/qrail.png"
+                }
+            },
+            {
+                "base_url": "https://uatadmin.qr.com.qa",
+                "url": "https://www.youtube.com/",
+                "title": "Youtube",
+                "external": true,
+                "icon": {
+                    "alt": "Youtube",
+                    "url": "https://uatweb.qr.com.qa/cms/sites/default/files/2022-11/youtube_icon.png"
+                },
+                "icon_mini": {
+                    "alt": "default image",
+                    "url": "https://uatweb.qr.com.qa/cms/modules/custom/qatar_rail_helper_module/assets/images/qrail.png"
+                }
+            }
+        ]
+    }
+}

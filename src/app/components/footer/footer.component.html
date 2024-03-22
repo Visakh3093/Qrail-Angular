@@ -1,0 +1,67 @@
+<footer class="page-footer pb-4" role="contentinfo">
+  <div class="container-lg">
+    <div class="grey-box">
+      <div class="row gy-4 footer-top  ms-0 me-0 d-none d-lg-flex">
+
+
+        @for (item of footerData; track $index) {
+
+        <div class="col-xl col-sm-4 col-12">
+          <h3 class="text-white mb-3">{{item.title}}</h3>
+          <nav>
+            @if (item.below) {
+            <ul role="menu">
+              @for (item_2 of item.below; track $index) {
+              @if(item_2?.external)
+              {
+              <li>
+                <a target="_blank" href={{item_2?.url}}>{{item_2?.title}}</a>
+              </li>
+              }
+              @else {
+              <li>
+                <a [routerLink]="'/'+item_2.url">{{item_2?.title}}</a>
+              </li>
+              }
+              }
+            </ul>
+            }
+          </nav>
+        </div>
+        }
+      </div>
+
+      <div class="footer-bottom">
+        <div class="row align-items-center  text-center gy-4 gy-lg-0">
+          <div class="col-12 col-lg-auto">
+            <a href="index.html">
+              <img src="assets/images/qrail-logo.svg" class="img-fluid" alt="footer logo" />
+            </a>
+          </div>
+          <div class="col-12 col-lg-auto order-lg-2">
+            <ul class="social d-flex justify-content-center">
+              <li>
+                <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-12 col-lg">
+            <p class="text-white m-0">All Rights Reserved <i class="fa fa-copyright"></i> Qatar Rail
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</footer>

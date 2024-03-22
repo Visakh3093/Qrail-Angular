@@ -1,0 +1,73 @@
+<div class="container-lg">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a routerLink="/">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page"><a routerLink="/login">Log in</a></li>
+        </ol>
+    </nav>
+</div>
+<div class="container-lg ">
+    <div class="grey-box mb-5 py-0 py-md-5">
+        <div class="row justify-content-center">
+            <div class="col col-md-6 col-lg-6 col-xl-4">
+                <h1 class="f25 text-yellow1 text-center mt-3">Welcome back</h1>
+                <p class="text-center">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam eirmod
+                    tempor invidunt ut labore et dolore</p>
+                <form [formGroup]="formData" (ngSubmit)="handleSubmit()" class="text-white mt-4 pt-1">
+                    @for (item of inputData; track $index) {
+                        @switch (item.type) {
+                            @case ("email") {
+
+                                <div class="mb-3">
+                                    <label for="userName" class="form-label">Email Address</label>
+                                    <input formControlName="email" type="text" class="form-control" [class.is-invalid]="errorObj[item.key]" id="userName" aria-describedby="User name"
+                                        placeholder="example@gmail.com">
+                                    <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.
+                                    </div> -->
+                                    @if (errorObj[item.key] != "") {
+                                        <div id="validationServer03Feedback" class="invalid-feedback">
+                                            {{errorObj[item.key]}}
+                                        </div>
+                                    }
+                                </div>
+
+                            }
+                            @case ("password") {
+
+                                <div class="mb-2">
+                                    <label for={{item.key}} class="form-label">Password</label>
+                                    <div class="position-relative">
+                                        <input  formControlName={{item.key}} [type]="passwordValue?'password':'text'" class="form-control" [class.is-invalid]="errorObj[item.key]" id={{item.key}} aria-describedby="password"
+                                            placeholder="Password">
+                                        <button type="button" (click)="show()" class="btn btn-secondary btn-sm show-btn" >Show</button>
+                                    </div>
+                                    @if (errorObj[item.key] != "") {
+                                        <div id="validationServer03Feedback" class="invalid-feedback">
+                                            {{errorObj[item.key]}}
+                                        </div>
+                                    }
+                                </div>
+            
+                            }
+                        }
+                    }
+                   
+                   
+                    <div class="form-check mb-5 pt-2 d-flex justify-content-between">
+                        <input  type="checkbox" class="form-check-input" id="loginFormRememberMeCheck"
+                            name="loginFormRememberMeCheck">
+                        <label class="form-check-label me-auto" for="loginFormRememberMeCheck"> Remember
+                            me</label>
+                        <a routerLink="/forgot-password" class="text-white link-text">Forgot password?</a>
+                    </div>
+
+                    <button  class="btn btn-primary w-100">Log in</button>
+                    <div class="d-flex flex-column mt-5 pt-1">
+                        <p class="text-yellow2 text-center mb-0">Don’t have an account ?</p>
+                        <p class="text-center"><a class="option-lnk" routerLink="/register">Register Now</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

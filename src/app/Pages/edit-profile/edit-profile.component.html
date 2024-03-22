@@ -1,0 +1,105 @@
+<div class="container-lg">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a routerLink="/">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page"><a routerLink="/edit-profile">Profile</a></li>
+        </ol>
+    </nav>
+</div>
+
+<div class="container-lg ">
+    <div class="grey-box mb-5">
+        <div class="row">
+            <div class="col-lg-12 order-1 order-lg-1">
+                <h1 class="f25 text-white mt-4 mt-lg-0 mb-4">Profile</h1>
+            </div>
+            <div class="col-lg-8 order-3 order-lg-2">
+                <form [formGroup]="formData" (ngSubmit)="handleSubmit()" class="row text-white">
+                    <div class="mb-3 col-lg-6">
+                        <label for="id" class="form-label">ID Type</label>
+                        <select id="id" class="form-select form-control" disabled>
+                            <option>QID/QRP</option>
+                        </select>
+                    </div>
+                    <div class="mb-3 col-lg-6">
+                        <label  for="title" class="form-label">Profession </label>
+                        <select formControlName="profession" id="title" class="form-select form-control" [class.is-invalid]="errorObj['profession']">
+                            <option>Admin</option>
+                        </select>
+                    </div>
+                    <div class="mb-3 col-lg-6">
+                        <label for="idNumber" class="form-label">ID Number</label>
+                        <input type="text" class="form-control" value="297845666966" id="idNumber"
+                            aria-describedby="User name" placeholder="ID Number" disabled>
+                    </div>
+                    <div class="mb-3 col-lg-6">
+                        <label for="telephone" class="form-label">Mobile Number</label>
+                        <input formControlName="mobile" type="tel" class="form-control" [class.is-invalid]="errorObj['mobile']" id="telephone" aria-describedby="User name"
+                            placeholder="+971 xxxx xxxx" value="+971 5048 5862">
+                            @if (errorObj['mobile'] != "") {
+                                <div id="validationServer03Feedback" class="invalid-feedback">
+                                    {{errorObj['mobile']}}
+                                </div>
+                            }
+                    </div>
+                    <div class="mb-3 col-lg-6">
+                        <label for="title" class="form-label">Title</label>
+                        <select id="title" class="form-select form-control" disabled>
+                            <option>Miss</option>
+                        </select>
+                    </div>
+                    <div class="mb-3 col-lg-6">
+                        <label for="id" class="form-label">Birth Date</label>
+                        <input type="date" class="form-control" id="id" aria-describedby="User name"
+                            placeholder="Select" value="15/05/19978" disabled>
+                    </div>
+                    <div class="mb-3 col-lg-6">
+                        <label for="name " class="form-label">First Name</label>
+                        <input type="text" class="form-control" id="name" aria-describedby="User name"
+                            placeholder="First name" value="Rachel" disabled>
+                    </div>
+
+                    <div class="mb-3 col-lg-6">
+                        <label for="gender" class="form-label">Gender </label>
+                        <select id="gender" class="form-select form-control" disabled>
+                            <option>Select</option>
+                        </select>
+                    </div>
+                    <div class="mb-3 col-lg-6">
+                        <label for="lastName " class="form-label">Last Name</label>
+                        <input type="text" class="form-control" id="lastName" aria-describedby="User name"
+                            placeholder="Last name" value="Mandes" disabled>
+                    </div>
+
+                    <div class="mb-3 col-lg-6">
+                        <label for="nationality " class="form-label">Nationality</label>
+                        <select id="nationality " class="form-select form-control" disabled>
+                            <option>India</option>
+                        </select>
+                    </div>
+                    <div class="mb-1 col-12">
+                        <div class="form-check ps-0">
+                            <input  type="checkbox" formControlName="agree" class="form-check-input" [class.is-invalid]="errorObj['agree']" id="subscribe" name="subscribe">
+                            <label class="form-check-label me-auto" for="subscribe">Subscribe for offers &
+                                promotions</label>
+                        </div> 
+                    </div>
+                    <div class="mt-3">
+                        <button class="btn btn-primary  me-1 me-lg-2" >Update </button>
+                        <a class="btn btn-primary me-1 me-lg-2" href="#">Cancel</a>
+                    </div>
+                </form>
+            </div>
+            <div class="col-lg-4 order-2 order-lg-3 mb-4 mb-lg-0">
+                <div class="bg-grey p-4 rounded ms-lg-5">
+                    <h2 class="text-white mb-4 f20">Why Update Profile?</h2>
+                    <ul class="list-triangle mb-4">
+                        <li>To receive offers & promotions though SMS and eMail.</li>
+                    </ul>
+                    <p class="fw-ligh"><i>For more information <a href="" class="text-yellow1 link-text">Click
+                                here</a></i></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

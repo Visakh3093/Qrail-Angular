@@ -1,0 +1,109 @@
+<div class="container-lg">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a routerLink="/">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page"><a routerLink="/top-up">Top up</a></li>
+        </ol>
+    </nav>
+</div>
+
+<div class="container-lg ">
+    <div class="grey-box mb-4">
+        <h1 class="f25 text-white mb-3">Top up </h1>
+        <div class="row">
+            <div class="col-lg-10">
+                <form [formGroup]="formData" (ngSubmit)="handleSubmit()" class="text-white">
+                    @for (item of inputData; track $index) {
+                        @switch (item.type) {
+                            @case ("select") {
+                                <div class="row">
+                                    <div class="mb-3 col-lg-5">
+                                        <label  for="id" class="form-label">Select travel card</label>
+                                        <select formControlName="new_card" id="id" class="form-select form-control">
+                                            <option [defaultSelected]="true" value="1">Enter another travel card no</option>
+                                            <option>Select your Card</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <label for="id" class="form-label warning" [class.warning-red]="errorObj['travelcard_no']" >Travel card no</label>
+                                        <div class="d-flex">
+                                            <input formControlName="travelcard_no" #text1 type="text" (keyup)="move($event,'',text1,text2)" maxlength="10" class="form-control me-2" id="amount" aria-describedby="User name" placeholder="31061800 XXXXXXXXX">
+                                            <input type="text" maxlength="1" formControlName="travelcard_sub" #text2 (keyup)="move($event,text1,text2,'')" class="form-control single-digit" id="amount" aria-describedby="User name" placeholder="X">
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                            @case ("text") {
+                                <div class="mb-3 col-lg-8">
+                                    <label for="amount" class="form-label">Top Up Amount</label>
+                                    <div class="radio-check-btn">
+                                        <input formControlName={{item.key}} (keypress)="handleNumber($event)"  type="text" class="form-control me-md-2 " [class.is-invalid]="errorObj[item.key]"  id="amount" value={{formData.value.topup_amount}} aria-describedby="User name" placeholder="Enter amount">
+                                        
+                                        <div class="d-flex">
+                                            @for (button_item of buttonValue; track $index) {
+
+                                                <button  type="button"class="btn btn-white mt-3 mt-lg-0 me-2" [class.active]="formData.value.topup_amount == button_item.value" (click)="handleTopup(button_item.value,button_item.name)" >{{button_item.placeholder}}</button>
+                                            }
+                                           
+
+                                        </div>
+                                    </div>
+                                    <div class=" warning-red mt-2" [class.warning]="errorObj[item.key]"><i class="fa fa-info-circle"></i> Enter amount between QAR 10 and QAR 500</div>
+                                </div>
+                            }
+                            @case ("email") {
+                                <div class="mb-3 col-lg-5">
+                                    <label for="email" class="form-label">Email address</label>
+                                    <input  type="text" class="form-control" id="email" aria-describedby="User name" value="rachel51297@gmail.com" disabled>
+                                </div>
+                            }
+                            @case ("button") {
+                                <div class="mb-4 mt-4 col-lg-5">
+                                    <label for="card-type" class="form-label warning" [class.warning-red]="errorObj[item.key]">Card Type</label>
+                                    <div class="d-flex align-items-center radio-round">
+                                        <div class="radio-border">
+                                            <input formControlName={{item.key}} type="radio" id="test1" name={{item.key}} value="credit" [class.is-invalid]="errorObj[item.key]" checked>
+                                            <label for="test1">Credit card
+                                                <img src="assets/images/credit-card.png" class="img-fluid" alt="credit card" />
+                                            </label>
+                                        </div>
+                                        <div class="radio-border ms-3">
+                                            <input formControlName={{item.key}} type="radio" value="debit" id="test2" [class.is-invalid]="errorObj[item.key]" name={{item.key}}>
+                                            <label for="test2">Debit card
+                                                <img src="assets/images/debit-card.png" class="img-fluid" alt="debit card" />
+                                            </label>
+                                        </div>
+                                    </div>
+                                    @if (errorObj[item.key] != "") {
+                                        <div id="validationServer03Feedback" class="invalid-feedback">
+                                            {{errorObj[item.key]}}
+                                        </div>
+                                    }
+                                </div>
+                            }
+                            @case ("checkbox") {
+                                <div class="mb-3">
+                                    <div class="form-check ps-0">
+                                        <input formControlName={{item.key}} type="checkbox" class="form-check-input" [class.is-invalid]="errorObj[item.key]" id="privacy" name="privacy">
+                                        <label class="form-check-label me-auto" for="privacy">I have read and agree to the
+                                            <a href="" class="text-yellow1 link-text">Terms of service &amp; Privacy
+                                                policy</a></label>
+                                    </div>
+                                </div>
+                            }
+                        }
+                    }
+                   
+                    
+                    
+                    
+                   
+                    <div class="mt-3">
+                        <button class="btn btn-primary me-1 me-lg-2" href="#">Proceed </button>
+                        <a class="btn btn-primary me-1 me-lg-2" href="#">Cancel</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

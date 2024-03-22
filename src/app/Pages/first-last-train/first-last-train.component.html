@@ -1,0 +1,748 @@
+<div class="container-lg">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a routerLink="/">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page"><a routerLink="/first-last-train">First and last train </a></li>
+        </ol>
+    </nav>
+</div>
+
+<div class="container-lg">
+    <div class="grey-box mb-4">
+        <h2 class="f20 text-white mb-3">First and last train </h2>
+        <div class="row align-items-center justify-content-between">
+            <div class="col-12 col-lg-6">
+                <ul class="nav nav-tabs border-0 tab-image mb-3 mb-lg-0" id="myTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="metro-tab" data-bs-toggle="tab"
+                            data-bs-target="#metro" type="button" role="tab" aria-controls="metro"
+                            aria-selected="true">
+                            <img src="assets/images/metro-gold.png" alt="metro logo" class="img-fluid" />
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="tram-tab" data-bs-toggle="tab" data-bs-target="#tram"
+                            type="button" role="tab" aria-controls="tram" aria-selected="false">
+                            <img src="assets/images/tram-gold.png" alt="tram logo" class="img-fluid" />
+                        </button>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-12 col-lg-4">
+                <form class="form-one form-search" action="">
+                    <div class="mb-2">
+                        <label for="search-location" class="visually-hidden ">Search station</label>
+                        <div class="form-search">
+                            <input type="text" class="form-control ps-5" id="search-location"
+                            placeholder="Search by station">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="metro" role="tabpanel" aria-labelledby="metro-tab">
+                <div class="sidenav-mb d-block d-md-none mt-2 mt-md-0">
+                    <div class="dropdown">
+                        <a class="btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                        </a>
+
+                        <ul class="tab-vertical flex-column border-0 dropdown-menu" id="myTab" role="tablist" aria-labelledby="dropdownMenuLink">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active d-flex align-items-center" id="all-tab"
+                                    data-bs-toggle="tab" data-bs-target="#all" type="button" role="tab"
+                                    aria-controls="all" aria-selected="true">
+                                    <figure class="mb-0 me-2">
+                                        <img src="assets/images/metro-white-signal.svg" alt="metro white siganl"
+                                            class="img-fluid" />
+                                    </figure>
+                                    All lines
+                                </button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link d-flex align-items-center" id="red-tab" data-bs-toggle="tab"
+                                    data-bs-target="#red" type="button" role="tab" aria-controls="red"
+                                    aria-selected="false">
+                                    <figure class="mb-0 me-2">
+                                        <img src="assets/images/icons/metro-red-signal.svg" alt="metro red signal"
+                                            class="img-fluid w-18" />
+                                    </figure>
+                                    Red line
+                                </button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link d-flex align-items-center" id="green-tab" data-bs-toggle="tab"
+                                    data-bs-target="#green" type="button" role="tab" aria-controls="green"
+                                    aria-selected="false">
+                                    <figure class="mb-0 me-2">
+                                        <img src="assets/images/icons/metro-green-signal.svg" alt="metro green signal"
+                                            class="img-fluid w-18" />
+                                    </figure>
+                                    Green line
+                                </button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link d-flex align-items-center" id="yellow-tab" data-bs-toggle="tab"
+                                    data-bs-target="#yellow" type="button" role="tab" aria-controls="yellow"
+                                    aria-selected="false">
+                                    <figure class="mb-0 me-2">
+                                        <img src="assets/images/icons/metro-yellow-signal.svg" alt="metro yellow signal"
+                                            class="img-fluid w-18" />
+                                    </figure>
+                                    Gold line
+                                </button>
+                            </li>
+                        </ul>
+                      </div>
+                </div>
+                <ul class="nav nav-tabs tab-horizontal d-none d-md-flex" id="myTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active d-flex align-items-center" id="all-tab"
+                            data-bs-toggle="tab" data-bs-target="#all" type="button" role="tab"
+                            aria-controls="all" aria-selected="true">
+                            <figure class="mb-0 me-2">
+                                <img src="assets/images/metro-white-signal.svg" alt="metro white siganl"
+                                    class="img-fluid" />
+                            </figure>
+                            All lines
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link d-flex align-items-center" id="red-tab" data-bs-toggle="tab"
+                            data-bs-target="#red" type="button" role="tab" aria-controls="red"
+                            aria-selected="false">
+                            <figure class="mb-0 me-2">
+                                <img src="assets/images/icons/metro-red-signal.svg" alt="metro red signal"
+                                    class="img-fluid w-18" />
+                            </figure>
+                            Red line
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link d-flex align-items-center" id="green-tab" data-bs-toggle="tab"
+                            data-bs-target="#green" type="button" role="tab" aria-controls="green"
+                            aria-selected="false">
+                            <figure class="mb-0 me-2">
+                                <img src="assets/images/icons/metro-green-signal.svg" alt="metro green signal"
+                                    class="img-fluid w-18" />
+                            </figure>
+                            Green line
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link d-flex align-items-center" id="yellow-tab" data-bs-toggle="tab"
+                            data-bs-target="#yellow" type="button" role="tab" aria-controls="yellow"
+                            aria-selected="false">
+                            <figure class="mb-0 me-2">
+                                <img src="assets/images/icons/metro-yellow-signal.svg" alt="metro yellow signal"
+                                    class="img-fluid w-18" />
+                            </figure>
+                            Gold line
+                        </button>
+                    </li>
+                </ul>
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="all" role="tabpanel" aria-labelledby="all-tab">
+                        <h2 class="f20 text-white mb-3 d-block d-md-none">All lines</h2>
+                        <div class="row gx-xl-4 gy-4 row-cols-2 row-cols-sm-2 row-cols-lg-3  row-cols-xl-5">
+                            <div class="col">
+                                <a href="#">
+                                    <div class="black-box widget">
+                                        <figure class="m-0 me-3">
+                                            <img src="assets/images/pdf-green.svg" alt="pdf icon"
+                                                class="img-fluid" />
+                                        </figure>
+                                        <figcaption class="text-white">
+                                            Al Mansoura
+                                        </figcaption>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col">
+                                <a href="#">
+                                    <div class="black-box widget">
+                                        <figure class="m-0 me-3">
+                                            <img src="assets/images/pdf-red.svg" alt="pdf icon"
+                                                class="img-fluid" />
+                                        </figure>
+                                        <figcaption class="text-white">
+                                            Msheireb
+                                        </figcaption>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col">
+                                <a href="#">
+                                    <div class="black-box widget">
+                                        <figure class="m-0 me-3">
+                                            <img src="assets/images/pdf-red.svg" alt="pdf icon"
+                                                class="img-fluid" />
+                                        </figure>
+                                        <figcaption class="text-white">
+                                            The White Palace
+                                        </figcaption>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col">
+                                <a href="#">
+                                    <div class="black-box widget">
+                                        <figure class="m-0 me-3">
+                                            <img src="assets/images/pdf-yellow.svg" alt="pdf icon"
+                                                class="img-fluid" />
+                                        </figure>
+                                        <figcaption class="text-white">
+                                            Al Bidda
+                                        </figcaption>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col">
+                                <a href="#">
+                                    <div class="black-box widget">
+                                        <figure class="m-0 me-3">
+                                            <img src="assets/images/pdf-red.svg" alt="pdf icon"
+                                                class="img-fluid" />
+                                        </figure>
+                                        <figcaption class="text-white">
+                                            Al Messila
+                                        </figcaption>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col">
+                                <a href="#">
+                                    <div class="black-box widget">
+                                        <figure class="m-0 me-3">
+                                            <img src="assets/images/pdf-red.svg" alt="pdf icon"
+                                                class="img-fluid" />
+                                        </figure>
+                                        <figcaption class="text-white">
+                                            Hamad Hospital
+                                        </figcaption>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col">
+                                <a href="#">
+                                    <div class="black-box widget">
+                                        <figure class="m-0 me-3">
+                                            <img src="assets/images/pdf-yellow.svg" alt="pdf icon"
+                                                class="img-fluid" />
+                                        </figure>
+                                        <figcaption class="text-white">
+                                            Al Rayyan Al Qadeem
+                                        </figcaption>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col">
+                                <a href="#">
+                                    <div class="black-box widget">
+                                        <figure class="m-0 me-3">
+                                            <img src="assets/images/pdf-green.svg" alt="pdf icon"
+                                                class="img-fluid" />
+                                        </figure>
+                                        <figcaption class="text-white">
+                                            Al Shaqab
+                                        </figcaption>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col">
+                                <a href="#">
+                                    <div class="black-box widget">
+                                        <figure class="m-0 me-3">
+                                            <img src="assets/images/pdf-green.svg" alt="pdf icon"
+                                                class="img-fluid" />
+                                        </figure>
+                                        <figcaption class="text-white">
+                                            Qatar National Library
+                                        </figcaption>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col">
+                                <a href="#">
+                                    <div class="black-box widget">
+                                        <figure class="m-0 me-3">
+                                            <img src="assets/images/pdf-green.svg" alt="pdf icon"
+                                                class="img-fluid" />
+                                        </figure>
+                                        <figcaption class="text-white">
+                                            Al Riffa
+                                        </figcaption>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col">
+                                <a href="#">
+                                    <div class="black-box widget">
+                                        <figure class="m-0 me-3">
+                                            <img src="assets/images/pdf-yellow.svg" alt="pdf icon"
+                                                class="img-fluid" />
+                                        </figure>
+                                        <figcaption class="text-white">
+                                            Education City
+                                        </figcaption>
+                                    </div>
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="red" role="tabpanel" aria-labelledby="red-tab">
+                        <h2 class="f20 text-white mb-3 d-block d-md-none">Red line</h2>
+                        <div class="row gx-xl-4 gy-4 row-cols-2 row-cols-sm-2 row-cols-lg-3  row-cols-xl-5">
+                            <div class="col">
+                                <a href="#">
+                                    <div class="black-box widget">
+                                        <figure class="m-0 me-3">
+                                            <img src="assets/images/pdf-red.svg" alt="pdf icon"
+                                                class="img-fluid" />
+                                        </figure>
+                                        <figcaption class="text-white">
+                                            Al Mansoura
+                                        </figcaption>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col">
+                                <a href="#">
+                                    <div class="black-box widget">
+                                        <figure class="m-0 me-3">
+                                            <img src="assets/images/pdf-red.svg" alt="pdf icon"
+                                                class="img-fluid" />
+                                        </figure>
+                                        <figcaption class="text-white">
+                                            Msheireb
+                                        </figcaption>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col">
+                                <a href="#">
+                                    <div class="black-box widget">
+                                        <figure class="m-0 me-3">
+                                            <img src="assets/images/pdf-red.svg" alt="pdf icon"
+                                                class="img-fluid" />
+                                        </figure>
+                                        <figcaption class="text-white">
+                                            The White Palace
+                                        </figcaption>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col">
+                                <a href="#">
+                                    <div class="black-box widget">
+                                        <figure class="m-0 me-3">
+                                            <img src="assets/images/pdf-red.svg" alt="pdf icon"
+                                                class="img-fluid" />
+                                        </figure>
+                                        <figcaption class="text-white">
+                                            Al Bidda
+                                        </figcaption>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col">
+                                <a href="#">
+                                    <div class="black-box widget">
+                                        <figure class="m-0 me-3">
+                                            <img src="assets/images/pdf-red.svg" alt="pdf icon"
+                                                class="img-fluid" />
+                                        </figure>
+                                        <figcaption class="text-white">
+                                            Al Messila
+                                        </figcaption>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col">
+                                <a href="#">
+                                    <div class="black-box widget">
+                                        <figure class="m-0 me-3">
+                                            <img src="assets/images/pdf-red.svg" alt="pdf icon"
+                                                class="img-fluid" />
+                                        </figure>
+                                        <figcaption class="text-white">
+                                            Hamad Hospital
+                                        </figcaption>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col">
+                                <a href="#">
+                                    <div class="black-box widget">
+                                        <figure class="m-0 me-3">
+                                            <img src="assets/images/pdf-red.svg" alt="pdf icon"
+                                                class="img-fluid" />
+                                        </figure>
+                                        <figcaption class="text-white">
+                                            Al Rayyan Al Qadeem
+                                        </figcaption>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col">
+                                <a href="#">
+                                    <div class="black-box widget">
+                                        <figure class="m-0 me-3">
+                                            <img src="assets/images/pdf-red.svg" alt="pdf icon"
+                                                class="img-fluid" />
+                                        </figure>
+                                        <figcaption class="text-white">
+                                            Al Shaqab
+                                        </figcaption>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col">
+                                <a href="#">
+                                    <div class="black-box widget">
+                                        <figure class="m-0 me-3">
+                                            <img src="assets/images/pdf-red.svg" alt="pdf icon"
+                                                class="img-fluid" />
+                                        </figure>
+                                        <figcaption class="text-white">
+                                            Qatar National Library
+                                        </figcaption>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col">
+                                <a href="#">
+                                    <div class="black-box widget">
+                                        <figure class="m-0 me-3">
+                                            <img src="assets/images/pdf-red.svg" alt="pdf icon"
+                                                class="img-fluid" />
+                                        </figure>
+                                        <figcaption class="text-white">
+                                            Al Riffa
+                                        </figcaption>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col">
+                                <a href="#">
+                                    <div class="black-box widget">
+                                        <figure class="m-0 me-3">
+                                            <img src="assets/images/pdf-red.svg" alt="pdf icon"
+                                                class="img-fluid" />
+                                        </figure>
+                                        <figcaption class="text-white">
+                                            Education City
+                                        </figcaption>
+                                    </div>
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="green" role="tabpanel" aria-labelledby="green-tab">
+                        <h2 class="f20 text-white mb-3 d-block d-md-none">Green line</h2>
+                        <div class="row gx-xl-4 gy-4 row-cols-2 row-cols-sm-2 row-cols-lg-3  row-cols-xl-5">
+                            <div class="col">
+                                <a href="#">
+                                    <div class="black-box widget">
+                                        <figure class="m-0 me-3">
+                                            <img src="assets/images/pdf-green.svg" alt="pdf icon"
+                                                class="img-fluid" />
+                                        </figure>
+                                        <figcaption class="text-white">
+                                            Al Mansoura
+                                        </figcaption>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col">
+                                <a href="#">
+                                    <div class="black-box widget">
+                                        <figure class="m-0 me-3">
+                                            <img src="assets/images/pdf-green.svg" alt="pdf icon"
+                                                class="img-fluid" />
+                                        </figure>
+                                        <figcaption class="text-white">
+                                            Msheireb
+                                        </figcaption>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col">
+                                <a href="#">
+                                    <div class="black-box widget">
+                                        <figure class="m-0 me-3">
+                                            <img src="assets/images/pdf-green.svg" alt="pdf icon"
+                                                class="img-fluid" />
+                                        </figure>
+                                        <figcaption class="text-white">
+                                            The White Palace
+                                        </figcaption>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col">
+                                <a href="#">
+                                    <div class="black-box widget">
+                                        <figure class="m-0 me-3">
+                                            <img src="assets/images/pdf-green.svg" alt="pdf icon"
+                                                class="img-fluid" />
+                                        </figure>
+                                        <figcaption class="text-white">
+                                            Al Bidda
+                                        </figcaption>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col">
+                                <a href="#">
+                                    <div class="black-box widget">
+                                        <figure class="m-0 me-3">
+                                            <img src="assets/images/pdf-green.svg" alt="pdf icon"
+                                                class="img-fluid" />
+                                        </figure>
+                                        <figcaption class="text-white">
+                                            Al Messila
+                                        </figcaption>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col">
+                                <a href="#">
+                                    <div class="black-box widget">
+                                        <figure class="m-0 me-3">
+                                            <img src="assets/images/pdf-green.svg" alt="pdf icon"
+                                                class="img-fluid" />
+                                        </figure>
+                                        <figcaption class="text-white">
+                                            Hamad Hospital
+                                        </figcaption>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col">
+                                <a href="#">
+                                    <div class="black-box widget">
+                                        <figure class="m-0 me-3">
+                                            <img src="assets/images/pdf-green.svg" alt="pdf icon"
+                                                class="img-fluid" />
+                                        </figure>
+                                        <figcaption class="text-white">
+                                            Al Rayyan Al Qadeem
+                                        </figcaption>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col">
+                                <a href="#">
+                                    <div class="black-box widget">
+                                        <figure class="m-0 me-3">
+                                            <img src="assets/images/pdf-green.svg" alt="pdf icon"
+                                                class="img-fluid" />
+                                        </figure>
+                                        <figcaption class="text-white">
+                                            Al Shaqab
+                                        </figcaption>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col">
+                                <a href="#">
+                                    <div class="black-box widget">
+                                        <figure class="m-0 me-3">
+                                            <img src="assets/images/pdf-green.svg" alt="pdf icon"
+                                                class="img-fluid" />
+                                        </figure>
+                                        <figcaption class="text-white">
+                                            Qatar National Library
+                                        </figcaption>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col">
+                                <a href="#">
+                                    <div class="black-box widget">
+                                        <figure class="m-0 me-3">
+                                            <img src="assets/images/pdf-green.svg" alt="pdf icon"
+                                                class="img-fluid" />
+                                        </figure>
+                                        <figcaption class="text-white">
+                                            Al Riffa
+                                        </figcaption>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col">
+                                <a href="#">
+                                    <div class="black-box widget">
+                                        <figure class="m-0 me-3">
+                                            <img src="assets/images/pdf-green.svg" alt="pdf icon"
+                                                class="img-fluid" />
+                                        </figure>
+                                        <figcaption class="text-white">
+                                            Education City
+                                        </figcaption>
+                                    </div>
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="yellow" role="tabpanel" aria-labelledby="yellow-tab">
+                        <h2 class="f20 text-white mb-3 d-block d-md-none">Yellow line</h2>
+                        <div class="row gx-xl-4 gy-4 row-cols-2 row-cols-sm-2 row-cols-lg-3  row-cols-xl-5">
+                            <div class="col">
+                                <a href="#">
+                                    <div class="black-box widget">
+                                        <figure class="m-0 me-3">
+                                            <img src="assets/images/pdf-yellow.svg" alt="pdf icon"
+                                                class="img-fluid" />
+                                        </figure>
+                                        <figcaption class="text-white">
+                                            Al Mansoura
+                                        </figcaption>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col">
+                                <a href="#">
+                                    <div class="black-box widget">
+                                        <figure class="m-0 me-3">
+                                            <img src="assets/images/pdf-yellow.svg" alt="pdf icon"
+                                                class="img-fluid" />
+                                        </figure>
+                                        <figcaption class="text-white">
+                                            Msheireb
+                                        </figcaption>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col">
+                                <a href="#">
+                                    <div class="black-box widget">
+                                        <figure class="m-0 me-3">
+                                            <img src="assets/images/pdf-yellow.svg" alt="pdf icon"
+                                                class="img-fluid" />
+                                        </figure>
+                                        <figcaption class="text-white">
+                                            The White Palace
+                                        </figcaption>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col">
+                                <a href="#">
+                                    <div class="black-box widget">
+                                        <figure class="m-0 me-3">
+                                            <img src="assets/images/pdf-yellow.svg" alt="pdf icon"
+                                                class="img-fluid" />
+                                        </figure>
+                                        <figcaption class="text-white">
+                                            Al Bidda
+                                        </figcaption>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col">
+                                <a href="#">
+                                    <div class="black-box widget">
+                                        <figure class="m-0 me-3">
+                                            <img src="assets/images/pdf-yellow.svg" alt="pdf icon"
+                                                class="img-fluid" />
+                                        </figure>
+                                        <figcaption class="text-white">
+                                            Al Messila
+                                        </figcaption>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col">
+                                <a href="#">
+                                    <div class="black-box widget">
+                                        <figure class="m-0 me-3">
+                                            <img src="assets/images/pdf-yellow.svg" alt="pdf icon"
+                                                class="img-fluid" />
+                                        </figure>
+                                        <figcaption class="text-white">
+                                            Hamad Hospital
+                                        </figcaption>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col">
+                                <a href="#">
+                                    <div class="black-box widget">
+                                        <figure class="m-0 me-3">
+                                            <img src="assets/images/pdf-yellow.svg" alt="pdf icon"
+                                                class="img-fluid" />
+                                        </figure>
+                                        <figcaption class="text-white">
+                                            Al Rayyan Al Qadeem
+                                        </figcaption>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col">
+                                <a href="#">
+                                    <div class="black-box widget">
+                                        <figure class="m-0 me-3">
+                                            <img src="assets/images/pdf-yellow.svg" alt="pdf icon"
+                                                class="img-fluid" />
+                                        </figure>
+                                        <figcaption class="text-white">
+                                            Al Shaqab
+                                        </figcaption>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col">
+                                <a href="#">
+                                    <div class="black-box widget">
+                                        <figure class="m-0 me-3">
+                                            <img src="assets/images/pdf-yellow.svg" alt="pdf icon"
+                                                class="img-fluid" />
+                                        </figure>
+                                        <figcaption class="text-white">
+                                            Qatar National Library
+                                        </figcaption>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col">
+                                <a href="#">
+                                    <div class="black-box widget">
+                                        <figure class="m-0 me-3">
+                                            <img src="assets/images/pdf-yellow.svg" alt="pdf icon"
+                                                class="img-fluid" />
+                                        </figure>
+                                        <figcaption class="text-white">
+                                            Al Riffa
+                                        </figcaption>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col">
+                                <a href="#">
+                                    <div class="black-box widget">
+                                        <figure class="m-0 me-3">
+                                            <img src="assets/images/pdf-yellow.svg" alt="pdf icon"
+                                                class="img-fluid" />
+                                        </figure>
+                                        <figcaption class="text-white">
+                                            Education City
+                                        </figcaption>
+                                    </div>
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="tram" role="tabpanel" aria-labelledby="tram-tab">bb</div>
+        </div>
+
+    </div>
+</div>

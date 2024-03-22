@@ -1,0 +1,366 @@
+ <div class="container-lg">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a routerLink="/">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">
+                <a routerLink="/manage-cards">Manage cards</a></li>
+        </ol>
+    </nav>
+</div>
+
+<div class="container-lg">
+    <div class="grey-box mb-2">
+        <h2 class="f20 text-white mb-3">Manage cards</h2>
+        <div class="row align-items-center">
+            <div class="col-lg-8">
+                <div id="manage-card" data-bs-ride="carousel" class="announcements manage-card carousel slide">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="d-flex">
+                                <figure class="mb-0">
+                                    <img src="assets/images/manage-card.png" class="img-fluid rounded w-100"
+                                        alt="manage card" />
+                                </figure>
+                                <table class="table text-white table-card ms-lg-4">
+                                    <tr>
+                                        <td class="width-4">Travel Card Number</td>
+                                        <td>:</td>
+                                        <td>31061800 20009556236</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="width-4">Expiry Date</td>
+                                        <td>:</td>
+                                        <td>13/01/2026</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="width-4">Card Balance</td>
+                                        <td>:</td>
+                                        <td>QR 10</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="d-flex">
+                                <figure class="mb-0">
+                                    <img src="assets/images/manage-card.png" class="img-fluid rounded w-100"
+                                        alt="manage card" />
+                                </figure>
+                                <table class="table text-white table-card ms-lg-4">
+                                    <tr>
+                                        <td class="width-4">Travel Card Number</td>
+                                        <td>:</td>
+                                        <td>31061800 200043436236</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="width-4">Expiry Date</td>
+                                        <td>:</td>
+                                        <td>14/02/2027</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="width-4">Card Balance</td>
+                                        <td>:</td>
+                                        <td>QR 11</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#manage-card"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#manage-card"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+            <div class="col-lg-4 text-lg-end card-btn">
+                <button class="btn btn-primary mb-2 me-lg-2">Top up this card </button>
+                <button class="btn btn-primary mb-2 me-lg-2" data-bs-toggle="modal"
+                    data-bs-target="#newCardModal">Add new card</button>
+            </div>
+        </div>
+    </div>
+    <div class="grey-box mb-4">
+        <div class="sidenav-mb d-block d-md-none">
+            <div class="dropdown">
+                <a class="btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                </a>
+
+                <ul class="tab-vertical flex-column border-0 dropdown-menu" id="myTab" role="tablist" aria-labelledby="dropdownMenuLink">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active d-flex align-items-center" id="all-tab" data-bs-toggle="tab"
+                            data-bs-target="#all" type="button" role="tab" aria-controls="all" aria-selected="true">
+                            <figure class="mb-0 me-2">
+                                <img src="assets/images/metro-light-yellow-signal.svg" alt="metro yellow signal"
+                                    class="img-fluid" />
+                            </figure>
+                            Journey history
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link d-flex align-items-center" id="red-tab" data-bs-toggle="tab"
+                            data-bs-target="#red" type="button" role="tab" aria-controls="red" aria-selected="false">
+                            <figure class="mb-0 me-2">
+                                <img src="assets/images/top-up.svg" alt="top up" class="img-fluid w-18" />
+                            </figure>
+                            Top up history
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link d-flex align-items-center" id="green-tab" data-bs-toggle="tab"
+                            data-bs-target="#green" type="button" role="tab" aria-controls="green"
+                            aria-selected="false">
+                            <figure class="mb-0 me-2">
+                                <img src="assets/images/top-up.svg" alt="top up" class="img-fluid w-18" />
+                            </figure>
+                            Auto top up history
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link d-flex align-items-center" id="yellow-tab" data-bs-toggle="tab"
+                            data-bs-target="#yellow" type="button" role="tab" aria-controls="yellow"
+                            aria-selected="false">
+                            <figure class="mb-0 me-2">
+                                <img src="assets/images/products.svg" alt="products" class="img-fluid w-18" />
+                            </figure>
+                            Products
+                        </button>
+                    </li>
+                </ul>
+              </div>
+        </div>
+        <ul class="nav nav-tabs tab-horizontal mt-3 d-none d-md-flex" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active d-flex align-items-center" id="all-tab" data-bs-toggle="tab"
+                    data-bs-target="#all" type="button" role="tab" aria-controls="all" aria-selected="true">
+                    <figure class="mb-0 me-2">
+                        <img src="assets/images/metro-light-yellow-signal.svg" alt="metro yellow signal"
+                            class="img-fluid" />
+                    </figure>
+                    Journey history
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link d-flex align-items-center" id="red-tab" data-bs-toggle="tab"
+                    data-bs-target="#red" type="button" role="tab" aria-controls="red" aria-selected="false">
+                    <figure class="mb-0 me-2">
+                        <img src="assets/images/top-up.svg" alt="top up" class="img-fluid w-18" />
+                    </figure>
+                    Top up history
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link d-flex align-items-center" id="green-tab" data-bs-toggle="tab"
+                    data-bs-target="#green" type="button" role="tab" aria-controls="green"
+                    aria-selected="false">
+                    <figure class="mb-0 me-2">
+                        <img src="assets/images/top-up.svg" alt="top up" class="img-fluid w-18" />
+                    </figure>
+                    Auto top up history
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link d-flex align-items-center" id="yellow-tab" data-bs-toggle="tab"
+                    data-bs-target="#yellow" type="button" role="tab" aria-controls="yellow"
+                    aria-selected="false">
+                    <figure class="mb-0 me-2">
+                        <img src="assets/images/products.svg" alt="products" class="img-fluid w-18" />
+                    </figure>
+                    Products
+                </button>
+            </li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="all" role="tabpanel" aria-labelledby="all-tab">
+                <h2 class="f20 text-white mb-3 d-block d-md-none">Journey history</h2>
+                <div class="metro-table table-responsive">
+                    <table class="table">
+                        <thead>
+                            <th>Date</th>
+                            <th>Tap in</th>
+                            <th>Tap out</th>
+                            <th>Fare (QAR)</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span class="text-white">02/09/2022</span></td>
+                                <td><span class="text-white">18:21 - Qatar University</span></td>
+                                <td><span class="text-white">18:32 - Lusail QNB</span></td>
+                                <td><span class="text-white">2</span></td>
+                            </tr>
+                            <tr class="table-row-bg">
+                                <td><span class="text-white">02/09/2022</span></td>
+                                <td><span class="text-white">18:21 - Qatar University</span></td>
+                                <td><span class="text-white">18:32 - Lusail QNB</span></td>
+                                <td><span class="text-white">2</span></td>
+                            </tr>
+                            <tr>
+                                <td><span class="text-white">02/09/2022</span></td>
+                                <td><span class="text-white">18:21 - Qatar University</span></td>
+                                <td><span class="text-white">18:32 - Lusail QNB</span></td>
+                                <td><span class="text-white">2</span></td>
+                            </tr>
+                            <tr class="table-row-bg">
+                                <td><span class="text-white">02/09/2022</span></td>
+                                <td><span class="text-white">18:21 - Qatar University</span></td>
+                                <td><span class="text-white">18:32 - Lusail QNB</span></td>
+                                <td><span class="text-white">2</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="pagination-wrapper">
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination justify-content-center">
+                          <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                          <li class="page-item"><a class="page-link" href="#">1</a></li>
+                          <li class="page-item"><a class="page-link" href="#">2</a></li>
+                          <li class="page-item"><a class="page-link active" href="#">3</a></li>
+                          <li class="page-item"><a class="page-link" href="#">4</a></li>
+                          <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                        </ul>
+                      </nav>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="red" role="tabpanel" aria-labelledby="red-tab">
+                <h2 class="f20 text-white mb-3 d-block d-md-none">Top up history</h2>
+                <div class="metro-table table-responsive">
+                    <table class="table">
+                        <thead>
+                            <th>Date</th>
+                            <th>Tap in</th>
+                            <th>Tap out</th>
+                            <th>Fare (QAR)</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span class="text-white">02/09/2022</span></td>
+                                <td><span class="text-white">18:21 - Qatar University</span></td>
+                                <td><span class="text-white">18:32 - Lusail QNB</span></td>
+                                <td><span class="text-white">2</span></td>
+                            </tr>
+                            <tr class="table-row-bg">
+                                <td><span class="text-white">02/09/2022</span></td>
+                                <td><span class="text-white">18:21 - Qatar University</span></td>
+                                <td><span class="text-white">18:32 - Lusail QNB</span></td>
+                                <td><span class="text-white">2</span></td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+                <div class="pagination-wrapper">
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination justify-content-center">
+                          <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                          <li class="page-item"><a class="page-link" href="#">1</a></li>
+                          <li class="page-item"><a class="page-link" href="#">2</a></li>
+                          <li class="page-item"><a class="page-link active" href="#">3</a></li>
+                          <li class="page-item"><a class="page-link" href="#">4</a></li>
+                          <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                        </ul>
+                      </nav>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="green" role="tabpanel" aria-labelledby="green-tab">
+                <h2 class="f20 text-white mb-3 d-block d-md-none">Auto top up history</h2>
+                <div class="metro-table table-responsive">
+                    <table class="table">
+                        <thead>
+                            <th>Date</th>
+                            <th>Tap in</th>
+                            <th>Tap out</th>
+                            <th>Fare (QAR)</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span class="text-white">02/09/2022</span></td>
+                                <td><span class="text-white">18:21 - Qatar University</span></td>
+                                <td><span class="text-white">18:32 - Lusail QNB</span></td>
+                                <td><span class="text-white">2</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="pagination-wrapper">
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination justify-content-center">
+                          <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                          <li class="page-item"><a class="page-link" href="#">1</a></li>
+                          <li class="page-item"><a class="page-link" href="#">2</a></li>
+                          <li class="page-item"><a class="page-link active" href="#">3</a></li>
+                          <li class="page-item"><a class="page-link" href="#">4</a></li>
+                          <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                        </ul>
+                      </nav>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="yellow" role="tabpanel" aria-labelledby="yellow-tab">
+                <h2 class="f20 text-white mb-3 d-block d-md-none">Products</h2>
+                <div class="metro-table table-responsive">
+                    <table class="table">
+                        <thead>
+                            <th>Date</th>
+                            <th>Tap in</th>
+                            <th>Tap out</th>
+                            <th>Fare (QAR)</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span class="text-white">02/09/2022</span></td>
+                                <td><span class="text-white">18:21 - Qatar University</span></td>
+                                <td><span class="text-white">18:32 - Lusail QNB</span></td>
+                                <td><span class="text-white">2</span></td>
+                            </tr>
+                            <tr class="table-row-bg">
+                                <td><span class="text-white">02/09/2022</span></td>
+                                <td><span class="text-white">18:21 - Qatar University</span></td>
+                                <td><span class="text-white">18:32 - Lusail QNB</span></td>
+                                <td><span class="text-white">2</span></td>
+                            </tr>
+                            <tr>
+                                <td><span class="text-white">02/09/2022</span></td>
+                                <td><span class="text-white">18:21 - Qatar University</span></td>
+                                <td><span class="text-white">18:32 - Lusail QNB</span></td>
+                                <td><span class="text-white">2</span></td>
+                            </tr>
+                            <tr class="table-row-bg">
+                                <td><span class="text-white">02/09/2022</span></td>
+                                <td><span class="text-white">18:21 - Qatar University</span></td>
+                                <td><span class="text-white">18:32 - Lusail QNB</span></td>
+                                <td><span class="text-white">2</span></td>
+                            </tr>
+                            <tr>
+                                <td><span class="text-white">02/09/2022</span></td>
+                                <td><span class="text-white">18:21 - Qatar University</span></td>
+                                <td><span class="text-white">18:32 - Lusail QNB</span></td>
+                                <td><span class="text-white">2</span></td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="pagination-wrapper">
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination justify-content-center">
+                          <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                          <li class="page-item"><a class="page-link" href="#">1</a></li>
+                          <li class="page-item"><a class="page-link" href="#">2</a></li>
+                          <li class="page-item"><a class="page-link active" href="#">3</a></li>
+                          <li class="page-item"><a class="page-link" href="#">4</a></li>
+                          <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                        </ul>
+                      </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+ 

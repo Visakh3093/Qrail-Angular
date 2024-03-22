@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="73" height="73" viewBox="0 0 73 73">
+  <defs>
+    <filter id="Rectangle_19749" x="0" y="0" width="73" height="73" filterUnits="userSpaceOnUse">
+      <feOffset dy="8" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feFlood flood-color="#ff7070" flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Path_73531" x="16.75" y="10.75" width="39.5" height="39.5" filterUnits="userSpaceOnUse">
+      <feOffset dy="2" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-2"/>
+      <feFlood flood-opacity="0.239"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_31834" data-name="Group 31834" transform="translate(-546 -302)">
+    <g transform="matrix(1, 0, 0, 1, 546, 302)" filter="url(#Rectangle_19749)">
+      <rect id="Rectangle_19749-2" data-name="Rectangle 19749" width="37" height="37" rx="6" transform="translate(18 10)" fill="#ff7070"/>
+    </g>
+    <g id="Group_31833" data-name="Group 31833">
+      <g transform="matrix(1, 0, 0, 1, 546, 302)" filter="url(#Path_73531)">
+        <path id="Path_73531-2" data-name="Path 73531" d="M11.25,1A10.25,10.25,0,1,1,1,11.25,10.262,10.262,0,0,1,11.25,1Zm0,18.5A8.25,8.25,0,1,0,3,11.25,8.259,8.259,0,0,0,11.25,19.5Z" transform="translate(25.25 17.25)" fill="#fff" stroke="rgba(0,0,0,0)" stroke-width="1"/>
+      </g>
+      <g id="Group_38927" data-name="Group 38927" transform="translate(-1)">
+        <path id="Path_91003" data-name="Path 91003" d="M-23588.338-12670.135l-6.629,6.38" transform="translate(24175.326 12997.357)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="1.8"/>
+        <path id="Path_91004" data-name="Path 91004" d="M-23594.967-12670.135l6.629,6.38" transform="translate(24175.326 12997.357)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="1.8"/>
+      </g>
+    </g>
+  </g>
+</svg>

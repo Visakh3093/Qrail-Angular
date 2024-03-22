@@ -1,0 +1,122 @@
+<header class="page-header">
+    <div class="container-lg">
+      <nav class="navbar navbar-expand-lg">
+        <div class="navbar-logo">
+        <a class="navbar-brand m-0" routerLink="/">
+          <h1 class="m-0">
+            <img src="assets/images/qrail-logo.svg" class="img-fluid logo" alt="qatar rail logo" />
+          </h1>
+        </a>
+      </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse flex-column justify-content-end" id="navbarScroll">
+          <div class="collapse-open">
+            <ul class="navbar-nav ms-auto justify-content-end">
+              <li class="nav-item me-0 me-lg-2">
+                <a class="nav-link accessibility" routerLink="/" aria-label="accessibility">
+                  <img src="assets/images/icon-accessibility.svg" class="img-fluid"
+                    alt="accessibility icon" />
+                </a>
+              </li>
+              <li class="nav-item d-none d-lg-block me-0 me-lg-3">
+                <a class="nav-link text-white font-weight-300" href="#" aria-label="switch to Arabic">
+                  <img src="assets/images/flag-ar.svg" class="img-fluid me-2" />AR
+                </a>
+              </li>
+              @if(!user)
+              {
+                <li class="nav-item">
+                  <a class="btn btn-primary me-1 me-lg-2" routerLink="/login">Login </a>
+                  <a class="btn btn-primary" routerLink="/register">Register</a>
+                </li>
+              }
+              @else {
+                <li class="nav-item profile-dropdown dropdown menu-dropdown">
+									<button class="btn-profile d-flex align-items-center justify-content-center" role="button" id="profileDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+										<figure class="flex-shrink-0 img-profile m-0">
+											<img src="assets/images/profile-default.png" alt="" class="img-fluid">
+										</figure>
+										<div class="img-content ms-2">
+											<h6 class="text-white m-0">Rachel</h6>
+										</div>
+									</button>
+									<div class="dropdown-menu" aria-labelledby="profileDropdown">
+										<ul>
+											<li><a class="dropdown-item d-flex align-items-center" href="#">
+												<figure class="m-0 dropdown-image me-3">
+													<img src="assets/images/profile.svg" class="img-fluid" alt="Profile"/>
+												</figure>
+												Profile</a></li>
+											<li><a class="dropdown-item d-flex align-items-center" href="#">
+												<figure class="m-0 dropdown-image me-3">
+													<img src="assets/images/manage-cards.svg" class="img-fluid" alt="Manage cards"/>
+												</figure>
+												Manage cards</a></li>
+											<li><a class="dropdown-item d-flex align-items-center" href="#">
+												<figure class="m-0 dropdown-image me-3">
+													<img src="assets/images/change-password.svg" class="img-fluid" alt="Change Password"/>
+												</figure>
+												Change password</a></li>
+											<li><a class="dropdown-item d-flex align-items-center" (click)="handleLogout()">
+												<figure class="m-0 dropdown-image me-3">
+													<img src="assets/images/logout.svg" class="img-fluid" alt="Logout"/>
+												</figure>
+												Logout</a></li>
+										</ul>
+									</div>
+								</li>
+              }
+              
+            </ul>
+            <ul class="navbar-nav ms-auto  mt-lg-2 menu-dropdown">
+              @for (item of header; track $index) {
+
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" id="navbarDropdown"
+                    data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{item?.title}}</a>
+                    @if(item?.below)
+                    {
+                      <ul class="dropdown-menu menu-transition" aria-labelledby="navbarDropdown">
+                      @for (item_2 of item?.below; track $index) {
+                        @if (item_2.external) {
+                          <li><a class="dropdown-item" target="_blank" href={{item_2.url}}>{{item_2?.title}}</a></li>
+                        }
+                        @else {
+
+                          <li><a class="dropdown-item" [routerLink]="'/'+item_2?.url">{{item_2?.title}}</a></li>
+                        }
+                        
+                      }
+                      
+                    </ul>
+                    }
+                    <!-- <li><a class="dropdown-item" href="">Register</a></li>
+                    <li><a class="dropdown-item" href="">Top up</a></li>
+                    <li><a class="dropdown-item" href="">Licensed retailers</a></li> -->
+                </li>
+              }
+              <!-- <li class="nav-item dropdown ">
+                <a class="nav-link dropdown-toggle" href="#">Travel information</a>
+              </li>
+              <li class="nav-item dropdown ">
+                <a class="nav-link dropdown-toggle" href="#">Help & contacts</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Qatar rail</a>
+              </li> -->
+            </ul>
+            <div class="d-lg-none d-block d-flex justify-content-between">
+              <span class="text-white">Language</span>
+              <a class="nav-link text-white font-weight-300" href="#" aria-label="switch to Arabic">
+                <img src="assets/images/flag-ar.svg" class="img-fluid me-2" />AR
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
